@@ -1,0 +1,55 @@
+<body>
+      <!-- Details -->
+      <section class="home" id="home">
+        <!-- Details Content -->
+        <div class="home-content container" *ngIf="product">
+            <div class="home-img">
+                <img src="{{ product.image }}" alt="Product Image">
+            </div>
+            <div class="home-text">
+                <h1>{{ product.marca }} {{ product.nome }}</h1>
+                <p>{{ product.description }}</p>
+                <div class="btn-available">
+                   <a (click)="onAddCart(product)" class="btn">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span>Add to Bag</span>
+                   </a>
+                        <p>{{ product.disponibilita ? "" : "Out of Stock" }}</p> 
+                </div>
+            </div>
+        </div>
+      </section>
+
+       <!-- Footer -->
+    <section class="footer container">
+        <a href="#" class="logo">
+          <img src="https://www.premiumluxurywatch.com/wp-content/uploads/2022/09/WATCH-LOGO-CLIENT-FINAL-02.png" alt="Logo">
+        </a>
+        <div class="footer-box">
+          <h2>Products</h2>
+          <a href="#">Luxury</a>
+          <a href="#">Regular</a>
+          <a href="#">Normal</a>
+          <a href="#">Case</a>
+        </div>
+        <div class="footer-box">
+          <h2>Payments</h2>
+          <a href="#">Return Policy</a>
+          <a href="#">Refunds</a>
+          <a href="#">Support</a>
+          <a href="#">Terms of Use</a>
+        </div>
+        <div class="footer-box">
+          <h2>Social</h2>
+          <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+          </div>
+        </div>
+      </section>
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>&#169; Nicolò Trombin All Right Reserved.</p>
+      </div>
+</body>

@@ -1,0 +1,25 @@
+<body>
+    <div class="register-box">
+        <h2>Sign Up</h2>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="user-box">
+                <input type="text" formControlName="username">
+                <label>Enter Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" formControlName="password">
+                <label>Enter Password</label>
+            </div>
+            <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </button>
+        </form>
+        <br>
+        <br>
+        <a style="color: rgb(125, 184, 204);" routerLink="/login">You have an account? Get in</a>
+    </div>
+</body>

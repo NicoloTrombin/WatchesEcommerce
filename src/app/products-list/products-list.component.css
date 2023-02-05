@@ -1,0 +1,230 @@
+:root {
+    --main-color: #fd4646;
+    --text-color: #171427;
+    --bg-color: #fff;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    color: #171427;
+}
+
+img{
+    width: 100%;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+section {
+    padding: 4rem 0 3rem;
+}
+
+.logo img{
+    color: #171427;
+    width: 100px;
+}
+
+
+/* Section */
+
+.section-title {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1.5rem;
+}
+
+
+/* Shop content */
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+}
+
+
+.product-box {
+    position: relative;
+}
+
+.product-box:hover {
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: 500;
+}
+
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #ddd;
+    background: hsl(249, 32%, 17%);
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.add-cart:hover {
+    background: hsl(252, 31%, 29%);
+}
+
+/* New Season */
+.newSeason {
+margin-top: 5rem;
+display: flex;
+}
+
+.nsItem {
+flex: 1;
+background-color: black;
+color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.nsItem img {
+    object-fit: cover;
+}
+
+.nsImg {
+    width: 100%;
+    height: 250px;
+}
+
+.nsTitle {
+font-size: 40px;
+}
+
+.nsButton {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    padding: 12px 20px;
+    border: none;
+    background: #fd4646;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nsButton:hover {
+    background-color: #fff;
+    background: #171427;
+    transition: .3s;
+  }
+
+
+/* Footer */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, auto));
+    gap: 1rem;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-box a{
+    color: #171427;
+    margin-bottom: 4px;
+}
+
+.social {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.social .bx {
+    background: #171427;
+    color: #fff;
+    padding: 10px;
+    border-radius: .5rem;
+    font-size: 1rem;
+}
+
+.social .bx:hover {
+    background: hsl(252, 31%, 29%);
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media(max-width: 645px) {
+    .footer {
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+
+    .nsButton {
+        padding: 10px 16px;
+        font-size: .9rem;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery{
+        display: none;
+      }
+    
+      .newSeason{
+        flex-direction: column;
+      }
+    
+      .nsItem:nth-child(2){
+        padding: 50px;
+      }
+
+      .nsButton {
+        padding: 8px 14px;
+        font-size: .9rem;
+        font-weight: 500;
+    }
+
+}
+
+

@@ -1,0 +1,175 @@
+:root {
+    --main-color: #fd4646;
+    --text-color: #171427;
+    --bg-color: #fff;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    color: #171427;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+section {
+    padding: 4rem 0 3rem;
+}
+
+.slider {
+    background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    overflow: hidden;
+    margin-top: 2.2rem;
+  }
+  
+  .sliderWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1.5s ease-in-out;
+  }
+  
+  .sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .sliderBg {
+    width: 750px;
+    height: 750px;
+    position: absolute;
+  }
+  
+  .sliderImg {
+    width: 500px;
+    z-index: 1;
+  }
+  
+  .sliderTitle {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+    
+  .buyButton {
+    position: absolute;
+    top: 65%;
+    right: 10%;
+    padding: 12px 20px;
+    border: none;
+    background: #fd4646;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .buyButton:hover {
+    background-color: #fff;
+    background: #171427;
+    transition: .3s;
+  }
+
+  /* Features */
+  .features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    margin-top: 2rem;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .featureIcon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+  }
+  
+  .featureDesc {
+    color: gray;
+    width: 50%;
+    height: 100px;
+  }
+
+  @media screen and (max-width: 640px) {
+    .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sliderTitle {
+      background-image: linear-gradient(to top, rgb(0 0 0 / .5), rgba(0, 0, 0, 0.5));
+      
+    }
+
+  }
+
+  @media screen and (max-width:480px) {
+    .slider{
+        clip-path: none;
+      }
+    
+      .sliderImg{
+        width: 90%;
+      }
+    
+      .sliderBg{
+        width: 100%;
+        height: 100%;
+      }
+    
+      .sliderTitle{
+        display: none;
+      }
+    
+      .buyButton{
+       display: block;
+      }
+    
+      .features{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+  }
+

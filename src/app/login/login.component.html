@@ -1,0 +1,25 @@
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form [formGroup]="form" (ngSubmit)="onLogin()">
+            <div class="user-box">
+                <input type="text" formControlName="username" autofocus>
+                <label>Enter Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" formControlName="password">
+                <label>Enter Password</label>
+            </div>
+            <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+            </button>
+        </form>
+        <br>
+        <br>
+        <a style="color: rgb(125, 184, 204);" routerLink="/sign-up">You do not have an account? Join now</a>
+    </div>
+</body>

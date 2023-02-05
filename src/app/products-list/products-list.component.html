@@ -1,0 +1,74 @@
+<app-home></app-home>
+<body>
+    <!-- Shop -->
+    <section id="products" class="shop container">
+      <p style="text-align: center; color: #fd4646; ">_______</p>
+      <h2 class="section-title">Products</h2>
+      <!-- Content -->
+      <div class="shop-content">
+        
+        <!-- Box 1 -->
+        <div class="product-box" *ngFor="let p of products">
+          <img [routerLink]="['details', p.id]" src="{{ p.image }}" alt="" class="product-img">
+          <p class="product-title">{{ p.nome }}<p>
+          <span class="price">{{ p.prezzo | currency }}</span>
+          <i (click)="onAddCart(p)" class='bx bx-shopping-bag add-cart'></i>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- New Season -->
+  <div class="newSeason">
+      <div class="nsItem">
+          <img src="https://images.squarespace-cdn.com/content/v1/52d654d2e4b0a3af71bf6bcc/1391442938229-NHEJF2MDARXQQBSQ7N6H/_14A5112.jpg?format=1500w"
+              alt="" class="nsImg">
+      </div>
+      <div class="nsItem">
+          <h3 class="nsTitleSm">WINTER NEW ARRIVALS</h3>
+          <h1 class="nsTitle">New Season</h1>
+          <h1 class="nsTitle">New Collection</h1>
+          <a href="#nav">
+              <button class="nsButton">CHOOSE YOUR STYLE</button>
+          </a>
+      </div>
+      <div class="nsItem">
+          <img src="https://ksr-ugc.imgix.net/assets/023/438/247/c30c3f8f442b59ce61d83a54ac907cc0_original.jpg?ixlib=rb-4.0.2&crop=faces&w=1552&h=873&fit=crop&v=1548232108&auto=format&frame=1&q=92&s=9abbe71d5e7e482013517ed1460f3c0c"
+              alt="" class="nsImg">
+      </div>
+  </div>
+
+    <!-- Footer -->
+    <section class="footer container">
+      <a href="#" class="logo">
+        <img src="https://www.premiumluxurywatch.com/wp-content/uploads/2022/09/WATCH-LOGO-CLIENT-FINAL-02.png" alt="Logo">
+      </a>
+      <div class="footer-box">
+        <h2>Products</h2>
+        <a href="#">Luxury</a>
+        <a href="#">Regular</a>
+        <a href="#">Normal</a>
+        <a href="#">Case</a>
+      </div>
+      <div class="footer-box">
+        <h2>Payments</h2>
+        <a href="#">Return Policy</a>
+        <a href="#">Refunds</a>
+        <a href="#">Support</a>
+        <a href="#">Terms of Use</a>
+      </div>
+      <div class="footer-box">
+        <h2>Social</h2>
+        <div class="social">
+          <a href="#"><i class='bx bxl-facebook'></i></a>
+          <a href="#"><i class='bx bxl-twitter'></i></a>
+          <a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>&#169; Nicolò Trombin All Right Reserved.</p>
+    </div>
+  
+  </body>

@@ -37,7 +37,7 @@ export class ShoppingCartService {
       this.cart.push({
         prodotto: item,
         qty,
-      });
+      }); 
     } else {
       this.cart[indexOfExistingItem].qty += qty;
     }
@@ -58,4 +58,10 @@ export class ShoppingCartService {
 
     this.cartSubject.next(this.cart);
   }
+
+  updateQuantity() {
+    this.cartSubject.next(this.cart);
+  }
+
+
 }

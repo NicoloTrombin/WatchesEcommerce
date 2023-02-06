@@ -21,8 +21,9 @@
                   <img src="{{ item.prodotto.image }}" alt="" class="cart-img">
                   <div class="detail-box">
                       <div class="cart-product-title">{{ item.prodotto.nome }}</div>
-                      <div class="cart-price">{{ item.prodotto.prezzo | currency }}</div>
-                      <input type="number" value="{{ item.qty }}" class="cart-quantity">
+                      <div class="cart-price">{{ item.prodotto.prezzo | currency  }}</div>
+                      <input (focus)="showUpdate()" min="1" type="number" [(ngModel)]="item.qty" value="{{ item.qty }}"  class="cart-quantity">
+                      <button *ngIf="update" class="updateBtn" (click)="updateQ()">UPDATE</button>
                   </div>
                   <!-- Remove Cart -->
                   <i (click)="onClickRemoveItem(item)" class='bx bxs-trash-alt cart-remove'></i>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Product } from '../model/product';
 import { ShoppingCartItem } from '../model/shopping-cart-item';
 import { User } from '../model/user';
 import { AuthService } from '../service/auth.service';
@@ -33,22 +34,37 @@ export class HeaderComponent {
 
      this.cart$ = this.shoppingCartService.cart$;
      this.cartTotal$ = this.shoppingCartService.cartTotal$;
+     this.itemCount$ = this.shoppingCartService.itemCount$;
     }
-
+    
     onLogout() {
       this.authService.logout();
     }
-
+    
     displayCart: boolean = false;
-
+    
     onClickDisplay() {
       return this.displayCart = !this.displayCart; 
     }
-
+    
     onClickRemoveItem(item: ShoppingCartItem) {
       this.shoppingCartService.removeItem(item, 1);
-      
-
     }
+
+    logQuantity(qty: number) {
+      console.log(qty);
+    }
+
+    updateQ() {
+      this.shoppingCartService.updateQuantity();
+
+      this.update = false;
+    }
+
+    update: boolean = false;
     
+    showUpdate() {
+      this.update = true;
+    }
+
 }

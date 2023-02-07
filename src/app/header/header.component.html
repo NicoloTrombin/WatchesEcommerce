@@ -6,10 +6,9 @@
       <!-- Cart Icon -->
       <!-- Sign Up & Login -->
       <div class="credentials">
-        <a routerLink="/sign-up" *ngIf="isNotLogged$ | async">Sign Up</a>
-        <a routerLink="/login"   *ngIf="isNotLogged$ | async">Login</a>
-        <i (click)="onClickDisplay()" class='bx bx-shopping-bag' id="cart-icon"></i>
-        <button class="logout" *ngIf="loggedUser$ | async as loggedUser" (click)="onLogout()">Logout</button>
+            <i (click)="onClickDisplay()" class='bx bx-shopping-bag' id="cart-icon"></i>
+            <button class="logout" *ngIf="loggedUser$ | async as loggedUser" (click)="onLogout()">Logout</button>
+            <i routerLink="/login" *ngIf="isNotLogged$ | async" class='bx bxs-user-circle' id="user-icon"></i>
       </div>
       <!-- Cart -->
       <div [ngClass]="{'cart-active' : displayCart }" class="cart">

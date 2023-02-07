@@ -57,6 +57,20 @@ header {
     cursor: pointer;
 }
 
+#cart-icon:hover {
+    font-size: 2.3rem;
+}
+
+#user-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+#user-icon:hover {
+    font-size: 2.3rem;
+}
+
 .credentials a, button {
     font-family: 'PT Sans Narrow', sans-serif;
     color: #171427;
@@ -103,6 +117,7 @@ header {
     right: 0;
     width: 360px;
     max-height: 100vh;
+    height: 100%;
     padding: 20px;
     background: #fff;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);

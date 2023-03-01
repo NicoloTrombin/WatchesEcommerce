@@ -19,7 +19,7 @@ export class ProductsService {
             nome: 'Day Just',
             description: 'The unchanging aesthetic of the Datejust makes it immediately recognizable. The distinctive Oyster case shape, fluted 18K gold bezel, Cyclops lens over the date and five-link Jubilee bracelet—created especially for Datejust models—all helped make this timepiece a classic. ',
             prezzo: 17225,
-            image: 'https://cdn.shopify.com/s/files/1/0561/6677/7027/products/126231B_virtualfitting.png?v=1671748841&width=1600&height=1600&crop=center',
+            image: 'https://i.pinimg.com/originals/95/fe/38/95fe388835776b915f44ba6541517704.jpg',
             marca: 'Rolex',
             disponibilita: true
         },
